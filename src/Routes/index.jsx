@@ -8,7 +8,7 @@ const Routes = () => {
   return (
     <Switch>
       <Route exact path="/">
-        <Login setUser={setUser} />
+        <Login setUser={setUser} user={user} />
       </Route>
       <Route exact path="/SingUp">
         <SingUp />

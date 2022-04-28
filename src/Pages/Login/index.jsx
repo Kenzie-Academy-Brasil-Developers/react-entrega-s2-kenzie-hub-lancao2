@@ -7,8 +7,8 @@ import axios from "axios";
 import { toast } from "react-toastify";
 import { useHistory } from "react-router-dom";
 
-const Login = ({ setUser }) => {
-  const history = useHistory;
+const Login = ({ user, setUser }) => {
+  const history = useHistory();
 
   const schema = yup.object().shape({
     email: yup
@@ -31,17 +31,18 @@ const Login = ({ setUser }) => {
     axios
       .post("https://kenziehub.herokuapp.com/sessions", data)
       .then((response) => {
-        history.push(`/user/${response.user.name}`);
-        setUser(response.data.user);
-        window.localStorage.clear();
-        window.localStorage.setItem("@Kenziehub:token", response.data.token);
-        window.localStorage.setItem("@Kenziehub:user", response.data.user);
-      })
-      .catch(() =>
-        toast.error("Ops, algo deu errado", {
+        console.log(response.data);
+        setUser(response.data);
+        localStorage.clear();
+        localStorage.setItem("@Kenziehub:token", response.data.token);
+        localStorage.setItem("@Kenziehub:user", response.data.user);
+        // history.push(`/user/${response.user.name}`);
+        toast.success("sucesso", {
           theme: "dark",
-        })
-      );
+        });
+        return history.push(`/user/${response.data.user.name}`);
+      })
+      .catch((err) => toast.error("Ops, algo deu errado", { theme: "dark" }));
   };
 
   return (
