@@ -14,7 +14,7 @@ const Routes = () => {
         <SingUp />
       </Route>
       <Route path="/user/:userName">
-        <Dashboard />
+        <Dashboard setUser={setUser} user={user} />
       </Route>
     </Switch>
   );
