@@ -35,12 +35,9 @@ const Login = ({ user, setUser }) => {
         setUser(response.data);
         localStorage.clear();
         localStorage.setItem("@Kenziehub:token", response.data.token);
-        localStorage.setItem("@Kenziehub:user", response.data.user);
-        // history.push(`/user/${response.user.name}`);
-        toast.success("sucesso", {
-          theme: "dark",
-        });
+        localStorage.setItem("@Kenziehub:user", response.data.user); 
         return history.push(`/user/${response.data.user.name}`);
+        
       })
       .catch((err) => toast.error("Ops, algo deu errado", { theme: "dark" }));
   };
