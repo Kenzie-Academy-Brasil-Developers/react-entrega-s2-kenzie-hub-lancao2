@@ -4,7 +4,10 @@ import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useForm } from "react-hook-form";
 import axios from "axios";
+import { useHistory } from "react-router-dom";
+import { toast } from "react-toastify";
 const SingUp = () => {
+  const history = useHistory();
   const schema = yup.object().shape({
     name: yup.string().required("Campo obrigatorio"),
     email: yup.string().required("Campo obrigatorio").email("email invalido"),
@@ -26,19 +29,38 @@ const SingUp = () => {
   } = useForm({
     resolver: yupResolver(schema),
   });
+  const backToLogin = (second) => {
+    const timer = setTimeout(() => {
+      history.push("/");
+    }, second * 1000);
+    return () => clearTimeout(timer);
+  };
 
-  const onSubmit = ({ email, password, name, course_module }) => {
+  const onSubmit = (data) => {
+    const { email, password, name, course_modules } = data;
+    const singUpUser = {
+      email: email,
+      password: password,
+      name: name,
+      bio: "Lorem ipsum dolor emet",
+      contact: "Não enviado",
+      course_module: course_modules,
+    };
+    console.log(singUpUser);
     axios
-      .post("https://kenziehub.herokuapp.com/users", {
-        email: email,
-        password: password,
-        name: name,
-        bio: "Lorem ipsum dolor emet",
-        contact: "linkedin/in/",
-        course_module: course_module,
+      .post("https://kenziehub.herokuapp.com/users", singUpUser)
+      .then((response) => {
+        console.log(response);
+        toast.success("Conta criada com sucesso", {
+          theme: "dark",
+        });
+        backToLogin(2);
       })
-      .then((response) => console.log(response))
-      .catch((error) => console.log(error));
+      .catch((error) => {
+        toast.error("ops, Algo deu errado", {
+          theme: "dark",
+        });
+      });
   };
 
   return (
@@ -74,9 +96,6 @@ const SingUp = () => {
           <label>
             Selecionar Modulo
             <select {...register("course_modules")}>
-              <option selected disabled>
-                Escolha o seu modulo atual
-              </option>
               <option value="Primeiro módulo (Introdução ao Frontend)">
                 Primeiro módulo (Introdução ao Frontend)
               </option>
