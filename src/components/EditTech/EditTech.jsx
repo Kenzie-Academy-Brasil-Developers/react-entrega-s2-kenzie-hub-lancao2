@@ -31,11 +31,14 @@ const EditTech = ({ techId, atualTech, handleOpenModalEdit }) => {
       )
       .then((response) => {
         handleOpenModalEdit();
+        console.log("alterou");
         return toast.success("Tecnologia alterada com sucesso", {
           theme: "dark",
         });
       })
-      .catch((erro) => toast.error("Ops, algo deu errado", { theme: "dark" }));
+      .catch((erro) =>
+        toast.error("Ops, algo deu errado alterou", { theme: "dark" })
+      );
   };
 
   const deleteTech = () => {
@@ -46,14 +49,15 @@ const EditTech = ({ techId, atualTech, handleOpenModalEdit }) => {
         },
       })
       .then((response) => {
+        console.log("aq excluiu");
         handleOpenModalEdit();
         return toast.success("Tecnologia deletada com sucesso", {
           theme: "dark",
         });
       })
-      .catch((err) =>
-        toast.error(" delet Ops, algo deu errado", { theme: "dark" })
-      );
+      .catch((err) => {
+        toast.error("Ops, algo deu errado", { theme: "dark" });
+      });
   };
 
   return (
@@ -77,13 +81,11 @@ const EditTech = ({ techId, atualTech, handleOpenModalEdit }) => {
           </select>
           <span>{errors.status?.message}</span>
         </label>
-        <div className="buttons">
-          <button type="submit">Salvar Alteraçoes</button>
-          <button className="delete" onClick={deleteTech}>
-            Excluir
-          </button>
-        </div>
+        <input type="submit" className="editbtn" label="Salvar Alteraçoes" />
       </form>
+      <button className="deletebtn" onClick={deleteTech}>
+        Excluir
+      </button>
     </>
   );
 };
