@@ -1,0 +1,58 @@
+@import "../../index.scss";
+
+.LoginScream {
+  width: 100vw;
+  height: 100vh;
+  @include flex(center);
+  flex-direction: column;
+  @include font;
+  img {
+    width: 60%;
+  }
+  .Login_Conteiner {
+    @include conteinercell;
+    h1 {
+      font-size: 14px;
+      font-weight: 700;
+    }
+    form {
+      height: 55%;
+      width: 85%;
+      @include flex(space-around);
+      flex-direction: column;
+      align-items: center;
+
+      label {
+        @include flex(flex-start);
+        flex-direction: column;
+        font-size: 9.5px;
+        font-weight: 400;
+        width: 100%;
+        height: 100%;
+        input {
+          @include input(35%, 100%, #343b41, #f8f9fa);
+        }
+        span {
+          color: rgb(204, 58, 58);
+        }
+      }
+      button {
+        @include button(35%, 100%);
+        cursor: pointer;
+      }
+    }
+    .newSingup {
+      label {
+        @include flex(space-around);
+        flex-direction: column;
+        align-items: center;
+        row-gap: 20px;
+        font-size: 9.5px;
+        button {
+          @include button(6.5vh, 75vw, #868e96, #343b41);
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

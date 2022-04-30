@@ -1,0 +1,181 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+body {
+  margin: 0;
+  background-color: #000000;
+  height: 100vh;
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.LoginScream {
+  width: 100vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-family: "Inter", sans-serif;
+}
+
+.LoginScream img {
+  width: 60%;
+}
+
+.LoginScream .Login_Conteiner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: space-around;
+      -ms-flex-align: space-around;
+          align-items: space-around;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 75%;
+  width: 90%;
+  margin-top: 15px;
+  border-radius: 4px;
+  background: #212529;
+  -webkit-box-shadow: 0px 3.20867px 32.0867px -8.02168px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 3.20867px 32.0867px -8.02168px rgba(0, 0, 0, 0.25);
+  color: #f8f9fa;
+}
+
+.LoginScream .Login_Conteiner h1 {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.LoginScream .Login_Conteiner form {
+  height: 55%;
+  width: 85%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: space-around;
+      -ms-flex-align: space-around;
+          align-items: space-around;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.LoginScream .Login_Conteiner form label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-size: 9.5px;
+  font-weight: 400;
+  width: 100%;
+  height: 100%;
+}
+
+.LoginScream .Login_Conteiner form label input {
+  background-color: #343b41;
+  border: none;
+  height: 35%;
+  width: 100%;
+  margin-top: 6px;
+  margin-bottom: 4px;
+  border-radius: 4px;
+  padding-left: 5px;
+  border: 0.9772px solid #f8f9fa;
+  color: #f8f9fa;
+  font-size: 13px;
+}
+
+.LoginScream .Login_Conteiner form label span {
+  color: #cc3a3a;
+}
+
+.LoginScream .Login_Conteiner form button {
+  height: 35%;
+  width: 100%;
+  border-radius: 4px;
+  border: 1.2182px solid #ff577f;
+  background-color: #ff577f;
+  color: #f8f9fa;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.LoginScream .Login_Conteiner form button:hover {
+  background-color: #ff427f;
+  border: 1.2182px solid #ff427f;
+}
+
+.LoginScream .Login_Conteiner .newSingup label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: space-around;
+      -ms-flex-align: space-around;
+          align-items: space-around;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  row-gap: 20px;
+  font-size: 9.5px;
+}
+
+.LoginScream .Login_Conteiner .newSingup label button {
+  height: 6.5vh;
+  width: 75vw;
+  border-radius: 4px;
+  border: 1.2182px solid #868e96;
+  background-color: #868e96;
+  color: #f8f9fa;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.LoginScream .Login_Conteiner .newSingup label button:hover {
+  background-color: #343b41;
+  border: 1.2182px solid #343b41;
+}
+/*# sourceMappingURL=style.css.map */

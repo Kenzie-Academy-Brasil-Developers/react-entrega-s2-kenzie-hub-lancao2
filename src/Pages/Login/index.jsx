@@ -6,6 +6,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import axios from "axios";
 import { toast } from "react-toastify";
 import { useHistory } from "react-router-dom";
+import "./style.css";
 
 const Login = ({ user, setUser }) => {
   const history = useHistory();
@@ -27,7 +28,6 @@ const Login = ({ user, setUser }) => {
   });
 
   const onSubmit = (data) => {
-    
     axios
       .post("https://kenziehub.herokuapp.com/sessions", data)
       .then((response) => {
@@ -35,8 +35,7 @@ const Login = ({ user, setUser }) => {
         setUser(response.data);
         localStorage.clear();
         localStorage.setItem("@Kenziehub:token", response.data.token);
-        localStorage.setItem(
-          "@Kenziehub:user", response.data.user.id);
+        localStorage.setItem("@Kenziehub:user", response.data.user.id);
         return history.push(`/user/${response.data.user.name}`);
       })
       .catch((err) => toast.error("Ops, algo deu errado", { theme: "dark" }));

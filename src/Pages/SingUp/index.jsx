@@ -6,6 +6,7 @@ import { useForm } from "react-hook-form";
 import axios from "axios";
 import { useHistory } from "react-router-dom";
 import { toast } from "react-toastify";
+import "./style.css";
 const SingUp = () => {
   const history = useHistory();
   const schema = yup.object().shape({
@@ -64,14 +65,16 @@ const SingUp = () => {
   };
 
   return (
-    <div className="SingUpScream">
-      <div className="SingUpHeader">
+    <div className="singUpScream">
+      <div className="singUpHeader">
         <img src={logo} alt="Logo kenzie hub" />
         <Link to="/">
           <button>Voltar</button>
         </Link>
       </div>
-      <div className="SingUpConteiner">
+      <div className="singUpConteiner">
+        <h2>Criar Conta</h2>
+        <p>Rapido e grátis, vamos nessa!</p>
         <form onSubmit={handleSubmit(onSubmit)}>
           <label>
             Nome

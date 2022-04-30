@@ -1,0 +1,179 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+body {
+  margin: 0;
+  background-color: #000000;
+  height: 100vh;
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.singUpScream {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  font-family: "Inter", sans-serif;
+}
+
+.singUpScream .singUpHeader {
+  width: 85%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: space-between;
+      -ms-flex-align: space-between;
+          align-items: space-between;
+}
+
+.singUpScream .singUpHeader img {
+  height: 90%;
+}
+
+.singUpScream .singUpHeader button {
+  height: 110%;
+  width: 120%;
+  border-radius: 4px;
+  border: 1.2182px solid #212529;
+  background-color: #212529;
+  color: #f8f9fa;
+  font-size: 16px;
+  font-size: 9.5px;
+}
+
+.singUpScream .singUpHeader button:hover {
+  background-color: #343b41;
+  border: 1.2182px solid #343b41;
+}
+
+.singUpScream .singUpConteiner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: space-around;
+      -ms-flex-align: space-around;
+          align-items: space-around;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 75%;
+  width: 90%;
+  margin-top: 15px;
+  border-radius: 4px;
+  background: #212529;
+  -webkit-box-shadow: 0px 3.20867px 32.0867px -8.02168px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 3.20867px 32.0867px -8.02168px rgba(0, 0, 0, 0.25);
+  color: #f8f9fa;
+  height: 85%;
+}
+
+.singUpScream .singUpConteiner h2 {
+  margin: 0;
+  margin-top: 5px;
+  font-size: 14px;
+}
+
+.singUpScream .singUpConteiner p {
+  color: #868e96;
+  font-size: 9.5px;
+  margin: 0;
+}
+
+.singUpScream .singUpConteiner form {
+  height: 80%;
+  width: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.singUpScream .singUpConteiner form label {
+  font-size: 9px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 22%;
+}
+
+.singUpScream .singUpConteiner form label input {
+  background-color: #343b41;
+  border: none;
+  height: 35%;
+  width: 100%;
+  margin-top: 6px;
+  margin-bottom: 4px;
+  border-radius: 4px;
+  padding-left: 5px;
+  border: 0.9772px solid #343b41;
+  color: #f8f9fa;
+  font-size: 13px;
+  width: auto;
+}
+
+.singUpScream .singUpConteiner form label span {
+  color: #cc3a3a;
+}
+
+.singUpScream .singUpConteiner form label select {
+  background-color: #343b41;
+  border: none;
+  border-radius: 4px;
+  height: 48%;
+  width: 100%;
+  color: #f8f9fa;
+  font-size: 12px;
+  margin-top: 6px;
+}
+
+.singUpScream .singUpConteiner form button {
+  height: 10%;
+  width: 100%;
+  border-radius: 4px;
+  border: 1.2182px solid #ff577f;
+  background-color: #ff577f;
+  color: #f8f9fa;
+  font-size: 16px;
+}
+
+.singUpScream .singUpConteiner form button:hover {
+  background-color: #ff427f;
+  border: 1.2182px solid #ff427f;
+}
+/*# sourceMappingURL=style.css.map */
