@@ -27,10 +27,11 @@ const Login = ({ user, setUser }) => {
   });
 
   const onSubmit = (data) => {
+    
     axios
       .post("https://kenziehub.herokuapp.com/sessions", data)
       .then((response) => {
-        console.log(response.data);
+        console.log("Data", response.data);
         setUser(response.data);
         localStorage.clear();
         localStorage.setItem("@Kenziehub:token", response.data.token);

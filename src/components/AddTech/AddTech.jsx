@@ -25,7 +25,12 @@ const AddTach = ({ handleOpenModal }) => {
           Authorization: `Bearer ${token}`,
         },
       })
-      .then((response) => handleOpenModal())
+      .then((response) => {
+        handleOpenModal();
+        return toast.success("Tecnologia adicionada com sucesso", {
+          theme: "dark",
+        });
+      })
       .catch((err) => toast.error("Ops, algo deu errado", { theme: "dark" }));
   };
 
