@@ -1,10 +1,12 @@
 import logo from "../../assets/logo.svg";
+import plus from "../../assets/Add.svg";
 import Modal from "react-modal";
 import { useEffect, useState } from "react";
 import AddTach from "../../components/AddTech/AddTech";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import EditTech from "../../components/EditTech/EditTech";
+import "./style.css";
 
 Modal.setAppElement("#root");
 
@@ -66,6 +68,34 @@ const Dashboard = () => {
   };
   return (
     <>
+      <header>
+        <img src={logo} alt="Logo KenzieHub" />
+        <Link to="/">
+          <button>Sair</button>
+        </Link>
+      </header>
+      <div className="userProfile">
+        <h3>Olá, {userName}</h3>
+        <p>{userStatus}</p>
+      </div>
+
+      <div className="techs">
+        <div className="techs_header">
+          <h3>Tecnologias</h3>
+          <button onClick={handleOpenModal}>
+            <img src={plus} alt="button add tech" />
+          </button>
+        </div>
+        <ul>
+          {techs &&
+            techs.map((event, index) => (
+              <li key={index} onClick={() => functionModalEdit(event)}>
+                <h4>{event.title}</h4>
+                <p>{event.status}</p>
+              </li>
+            ))}
+        </ul>
+      </div>
       <Modal
         isOpen={modalOpen}
         onRequestClose={handleOpenModal}
@@ -84,32 +114,6 @@ const Dashboard = () => {
           handleOpenModalEdit={handleOpenModalEdit}
         />
       </Modal>
-      <header>
-        <img src={logo} alt="Logo KenzieHub" />
-        <Link to="/">
-          <button>Sair</button>
-        </Link>
-      </header>
-      <div className="UserProfile">
-        <h3>Olá, {userName}</h3>
-        <p>{userStatus}</p>
-      </div>
-
-      <div className="techs">
-        <div>
-          <h3>Tecnologias</h3>
-          <button onClick={handleOpenModal}> open</button>
-        </div>
-        <ul>
-          {techs &&
-            techs.map((event, index) => (
-              <li key={index} onClick={() => functionModalEdit(event)}>
-                <h4>{event.title}</h4>
-                <p>{event.status}</p>
-              </li>
-            ))}
-        </ul>
-      </div>
     </>
   );
 };

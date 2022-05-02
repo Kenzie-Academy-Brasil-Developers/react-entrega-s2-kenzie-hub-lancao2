@@ -1,0 +1,191 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+body {
+  margin: 0;
+  background-color: #000000;
+  height: 100vh;
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header {
+  height: 10%;
+  width: 100%;
+  border-bottom: 1px solid #212529;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 43%;
+          column-gap: 43%;
+}
+
+header img {
+  height: 30%;
+}
+
+header button {
+  height: 35%;
+  width: 100%;
+  border-radius: 4px;
+  border: 1.2182px solid #212529;
+  background-color: #212529;
+  color: #f8f9fa;
+  font-size: 16px;
+  font-family: "Inter", sans-serif;
+  font-size: 13px;
+  padding: 2px 8px 2px 8px;
+}
+
+header button:hover {
+  background-color: #343b41;
+  border: 1.2182px solid #343b41;
+}
+
+.userProfile {
+  font-family: "Inter", sans-serif;
+  color: #f8f9fa;
+  border-bottom: 1px solid #212529;
+  padding-left: 5%;
+}
+
+.userProfile h3 {
+  font-size: 20px;
+}
+
+.userProfile p {
+  font-size: 13px;
+  color: #868e96;
+}
+
+.techs {
+  font-family: "Inter", sans-serif;
+  color: #f8f9fa;
+  margin-top: 8%;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.techs .techs_header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 110%;
+          column-gap: 110%;
+}
+
+.techs .techs_header button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #212529;
+  border: 0;
+  border-radius: 4px;
+  height: 22px;
+  width: 22px;
+}
+
+.techs .techs_header button:hover {
+  background-color: #343b41;
+}
+
+.techs ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: space-around;
+      -ms-flex-align: space-around;
+          align-items: space-around;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 75%;
+  width: 90%;
+  margin-top: 15px;
+  border-radius: 4px;
+  background: #212529;
+  -webkit-box-shadow: 0px 3.20867px 32.0867px -8.02168px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 3.20867px 32.0867px -8.02168px rgba(0, 0, 0, 0.25);
+  color: #f8f9fa;
+  height: 100%;
+  padding: 0;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.techs ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 12%;
+  width: 95%;
+  border-radius: 4px;
+  background-color: #121214;
+  margin: 5px 0px 5px 0px;
+}
+
+.techs ul li h4 {
+  width: 20%;
+  padding-left: 10px;
+}
+
+.techs ul li p {
+  font-size: 11.5px;
+  color: #868e96;
+  padding-right: 10px;
+}
+
+.techs ul li:hover {
+  background-color: #343B41;
+}
+/*# sourceMappingURL=style.css.map */
