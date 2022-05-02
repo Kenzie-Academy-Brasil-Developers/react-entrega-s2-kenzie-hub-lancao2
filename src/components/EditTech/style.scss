@@ -1,0 +1,60 @@
+@import "../../index.scss";
+.modalEdit_header {
+  background-color: #343b41;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 28%;
+  color: $fontColor1;
+  height: 33px;
+  @include font;
+  h2 {
+    margin: 0;
+    font-size: 15px;
+    white-space: nowrap;
+  }
+  button {
+    border: none;
+    background-color: transparent;
+    color: $fontColor1;
+  }
+}
+.modalEdit_form {
+  height: 52vh;
+  width: 93vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  form {
+    width: 90%;
+    height: 95%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    color: $fontColor1;
+    @include font;
+    label {
+      height: 34%;
+      input {
+        @include input(35%, 97%);
+        font-size: 15px;
+      }
+      select {
+        @include select;
+        font-size: 15px;
+      }
+    }
+    .buttons {
+      @include flex(center);
+      width: 100%;
+      column-gap: 5%;
+      .btnSubmit {
+        @include button(180%, 80%, #59323f, #6d2c42);
+      }
+      .deletebtn {
+        @include button(187%, 30%, #868e96, #343b41);
+      }
+    }
+  }
+}

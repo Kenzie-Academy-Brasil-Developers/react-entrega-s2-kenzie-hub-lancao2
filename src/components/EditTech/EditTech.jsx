@@ -3,6 +3,7 @@ import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 import axios from "axios";
 import { toast } from "react-toastify";
+import "./style.css";
 const EditTech = ({ techId, atualTech, handleOpenModalEdit }) => {
   const token = localStorage.getItem("@Kenziehub:token");
   const schema = yup.object().shape({
@@ -62,30 +63,36 @@ const EditTech = ({ techId, atualTech, handleOpenModalEdit }) => {
 
   return (
     <>
-      <div className="header">
+      <div className="modalEdit_header">
         <h2>Detalhes da Tecnologia</h2>
-        <button onClick={handleOpenModalEdit}>Sair</button>
+        <button onClick={handleOpenModalEdit}>X</button>
       </div>
-      <form onSubmit={handleSubmit(onSubmit)}>
-        <label>
-          Nome do projeto
-          <input type="text" value={atualTech} disabled="true" />
-          <span>{errors.tech?.message}</span>
-        </label>
-        <label>
-          Selecione Status
-          <select {...register("status")}>
-            <option value="Iniciante">Iniciante</option>
-            <option value="Intermediario">Intermediario</option>
-            <option value="Avançado">Avançado</option>
-          </select>
-          <span>{errors.status?.message}</span>
-        </label>
-        <input type="submit" className="editbtn" label="Salvar Alteraçoes" />
-      </form>
-      <button className="deletebtn" onClick={deleteTech}>
-        Excluir
-      </button>
+      <div className="modalEdit_form">
+        <form onSubmit={handleSubmit(onSubmit)}>
+          <label>
+            Nome do projeto
+            <input type="text" value={atualTech} disabled="true" />
+            <span>{errors.tech?.message}</span>
+          </label>
+          <label>
+            Selecione Status
+            <select {...register("status")}>
+              <option value="Iniciante">Iniciante</option>
+              <option value="Intermediario">Intermediario</option>
+              <option value="Avançado">Avançado</option>
+            </select>
+            <span>{errors.status?.message}</span>
+          </label>
+          <div className="buttons">
+            <button type="submit" className="btnSubmit">
+              Salvar Alteraçoes
+            </button>
+            <button className="deletebtn" type="button" onClick={deleteTech}>
+              Excluir
+            </button>
+          </div>
+        </form>
+      </div>
     </>
   );
 };

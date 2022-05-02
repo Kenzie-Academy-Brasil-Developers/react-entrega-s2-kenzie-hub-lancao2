@@ -39,7 +39,8 @@ header {
   align-items: center;
   .techs_header {
     @include flex(center);
-    column-gap: 110%;
+    width: 90%;
+    justify-content: space-between;
     button {
       @include flex(center);
       background-color: #212529;
@@ -75,7 +76,7 @@ header {
         padding-right: 10px;
       }
       &:hover {
-        background-color: #343B41;
+        background-color: #343b41;
       }
     }
   }
