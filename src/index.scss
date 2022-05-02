@@ -43,20 +43,29 @@ $fontColor1: #f8f9fa; //cor de fonte
   font-family: "Inter", sans-serif;
 }
 
-@mixin input($h:35%,$w:100%,$bg:#343b41,$b:#343b41) {
+@mixin input($h: 35%, $w: 100%, $bg: #343b41, $b: #343b41) {
   background-color: $bg;
-          border: none;
-          height: $h;
-          width: $w;
-          margin-top: 6px;
-          margin-bottom: 4px;
-          border-radius: 4px;
-          padding-left: 5px;
-          border: 0.9772px solid $b;
-          color: #f8f9fa;
-          font-size: 13px;
+  border: none;
+  height: $h;
+  width: $w;
+  margin-top: 6px;
+  margin-bottom: 4px;
+  border-radius: 4px;
+  padding-left: 5px;
+  border: 0.9772px solid $b;
+  color: #f8f9fa;
+  font-size: 13px;
 }
-
+@mixin select {
+  background-color: #343b41;
+  border: none;
+  border-radius: 4px;
+  height: 42%;
+  width: 100%;
+  color: $fontColor1;
+  font-size: 12px;
+  margin-top: 6px;
+}
 body {
   margin: 0;
   background-color: $bgColor;

@@ -51,14 +51,7 @@
           color: rgb(204, 58, 58);
         }
         select {
-          background-color: #343b41;
-          border: none;
-          border-radius: 4px;
-          height: 48%;
-          width: 100%;
-          color: $fontColor1;
-          font-size: 12px;
-          margin-top: 6px;
+         @include select
         }
       }
       button {

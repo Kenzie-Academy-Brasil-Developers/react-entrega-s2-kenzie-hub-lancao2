@@ -3,6 +3,7 @@ import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 import axios from "axios";
 import { toast } from "react-toastify";
+import "./style.css";
 const AddTach = ({ handleOpenModal }) => {
   const schema = yup.object().shape({
     title: yup.string().required("Campo obrigatorio"),
@@ -35,29 +36,31 @@ const AddTach = ({ handleOpenModal }) => {
   };
 
   return (
-    <>
-      <div className="header">
+    <div className="modalAdd">
+      <div className="modalAdd_header">
         <h2>Cadastrar tecnologia</h2>
         <button onClick={handleOpenModal}>X</button>
       </div>
-      <form onSubmit={handleSubmit(onSubmit)}>
-        <label>
-          Nome
-          <input type="text" {...register("title")} />
-          <span>{errors.title?.message}</span>
-        </label>
-        <label>
-          Selecione Status
-          <select {...register("status")}>
-            <option value="Iniciante">Iniciante</option>
-            <option value="Intermediario">Intermediario</option>
-            <option value="Avançado">Avançado</option>
-          </select>
-          {errors.status?.message}
-        </label>
-        <button type="submit">Cadastrar tecnologia</button>
-      </form>
-    </>
+      <div className="modalAdd_form">
+        <form onSubmit={handleSubmit(onSubmit)}>
+          <label>
+            Nome
+            <input type="text" {...register("title")} />
+            <span>{errors.title?.message}</span>
+          </label>
+          <label>
+            Selecione Status
+            <select {...register("status")}>
+              <option value="Iniciante">Iniciante</option>
+              <option value="Intermediario">Intermediario</option>
+              <option value="Avançado">Avançado</option>
+            </select>
+            {errors.status?.message}
+          </label>
+          <button type="submit">Cadastrar tecnologia</button>
+        </form>
+      </div>
+    </div>
   );
 };
 export default AddTach;

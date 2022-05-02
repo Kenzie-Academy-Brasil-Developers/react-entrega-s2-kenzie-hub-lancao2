@@ -1,0 +1,50 @@
+@import "../../index.scss";
+.modalAdd_header {
+  background-color: #343b41;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 35%;
+  color: $fontColor1;
+  height: 33px;
+  @include font;
+  h2 {
+    margin: 0;
+    font-size: 15px;
+  }
+  button {
+    border: none;
+    background-color: transparent;
+    color: $fontColor1;
+  }
+}
+.modalAdd_form {
+  height: 52vh;
+  width: 93vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  form {
+    width: 90%;
+    height: 95%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    color: $fontColor1;
+    @include font;
+    label {
+      height: 34%;
+      input {
+        @include input(35%, 97%);
+        font-size: 15px;
+      }
+      select {
+        @include select;
+        font-size: 15px;
+      }
+    }
+    button {
+      @include button(18%);
+    }
+  }
+}
