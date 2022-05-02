@@ -51,12 +51,17 @@
           color: rgb(204, 58, 58);
         }
         select {
-         @include select
+          @include select;
         }
       }
       button {
         @include button(10%);
       }
     }
+  }
+}
+@media screen and (min-width: 600px) {
+  .singUpScream {
+    width: 50%;
   }
 }
