@@ -67,7 +67,7 @@ const Dashboard = () => {
     handleOpenModalEdit();
   };
   return (
-    <>
+    <div className="dashboardScream">
       <header>
         <img src={logo} alt="Logo KenzieHub" />
         <Link to="/">
@@ -114,7 +114,7 @@ const Dashboard = () => {
           handleOpenModalEdit={handleOpenModalEdit}
         />
       </Modal>
-    </>
+    </div>
   );
 };
 export default Dashboard;

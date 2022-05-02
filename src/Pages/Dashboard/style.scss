@@ -1,4 +1,12 @@
 @import "../../index.scss";
+.dashboardScream {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 header {
   height: 10%;
   width: 100%;
@@ -20,6 +28,7 @@ header {
   color: $fontColor1;
   border-bottom: 1px solid #212529;
   padding-left: 5%;
+  width: 100%;
   h3 {
     font-size: 20px;
   }
@@ -62,7 +71,7 @@ header {
       @include flex(center);
       justify-content: space-between;
       height: 12%;
-      width: 95%;
+      width: 98%;
       border-radius: 4px;
       background-color: #121214;
       margin: 5px 0px 5px 0px;
@@ -79,5 +88,21 @@ header {
         background-color: #343b41;
       }
     }
+  }
+}
+@media screen and (min-width: 600px) {
+  header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .userProfile {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .techs {
+    width: 70%;
+    margin-top: 2%;
   }
 }
