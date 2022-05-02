@@ -61,9 +61,9 @@ const Login = ({ user, setUser }) => {
         <div className="newSingup">
           <label>
             Ainda nao possue uma conta?
-            <Link to="/SingUp">
-              <button>Cadastre-se</button>
-            </Link>
+            <button>
+              <Link to="/SingUp">Cadastre-se</Link>
+            </button>
           </label>
         </div>
       </div>
